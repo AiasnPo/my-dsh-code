@@ -1,0 +1,42 @@
+{
+  "name": "dsh-ctx-meter",
+  "version": "1.0.0",
+  "description": "See how much context a DeepSeek Harness session has actually used: per-request token truth, compaction history, and where the budget went.",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "context-window",
+    "tokens",
+    "cli"
+  ],
+  "license": "MIT",
+  "author": "dafiyu",
+  "type": "commonjs",
+  "main": "src/accounting.js",
+  "bin": {
+    "dsh-ctx": "bin/dsh-ctx.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22.15.0"
+  },
+  "scripts": {
+    "test": "node tests/stale.test.js && node tests/purge.test.js && node tests/slim.test.js",
+    "test:runner": "node --test tests/",
+    "check": "node --check bin/dsh-ctx.js && node --check src/store.js && node --check src/accounting.js && node --check src/render.js && node --check src/stale.js && node --check src/purge.js && node --check src/slim.js",
+    "demo": "node bin/dsh-ctx.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AiasPo/my-dsh-code.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AiasPo/my-dsh-code/issues"
+  },
+  "homepage": "https://github.com/AiasPo/my-dsh-code/tree/main/dsh-ctx-meter#readme"
+}
